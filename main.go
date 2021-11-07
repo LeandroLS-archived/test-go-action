@@ -7,14 +7,15 @@ import (
 
 func main() {
 	fmt.Println("Olá")
-	CreateFile()
+	file := CreateFile()
+	fmt.Printf(file.Name())
 }
 
-func CreateFile() {
+func CreateFile() *os.File {
 
-	_, err := os.Create("aaaa.txt")
+	file, err := os.Create("aaaa.txt")
 	if err != nil {
 		fmt.Println(err)
 	}
-	// return file
+	return file
 }
