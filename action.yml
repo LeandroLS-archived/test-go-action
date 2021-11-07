@@ -2,7 +2,5 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 runs:
-  using: composite
-  steps:
-  - run: go run mycustomaction.go
-    shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
