@@ -2,4 +2,6 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 runs:
+  using: composite
+  steps:
   - run: go run main.go
