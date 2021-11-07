@@ -2,5 +2,8 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: "composite"
+  steps:
+    - id: random-number-generator
+      run: go run mycustomaction.go
+      shell: bash
